@@ -16,14 +16,17 @@ router.register('fooditem_category', FoodItemCategoryModelViewSet, basename='foo
 router.register('restaurant_schedule', RestaurantScheduleModelViewSet, basename='restaurant_schedule')
 router.register('fooditem', FoodItemModelViewSet, basename='fooditem')
 router.register('singleorder', SingleOrderModelViewSet, basename='singleorder')
+router.register('cateringorder', CateringOrderModelViewSet, basename='cateringorder')
 router.register('grouporder', GroupOrderModelViewSet, basename='grouporder')
 router.register('singleorderitem', SingleOrderItemModelViewSet, basename='singleorderitem')
+router.register('cateringorderitem', CateringOrderItemModelViewSet, basename='cateringorderitem')
 router.register('grouporderitem', GroupOrderItemModelViewSet, basename='grouporderitem')
 
 router.register('company', CompanyModelViewSet, basename='company')
 router.register('team', TeamModelViewSet, basename='team')
 router.register('teamMember', TeamMemberModelViewSet, basename='teamMember')
 router.register('teamRule', TeamRuleModelViewSet, basename='teamRule')
+router.register('food_history', FoodHistoryModelViewSet, basename='food_history')
 
 router.register('review', ReviewModelViewSet, basename='review')
 

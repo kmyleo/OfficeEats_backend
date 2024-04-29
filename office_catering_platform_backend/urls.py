@@ -22,7 +22,7 @@ from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from rest_framework.authtoken.views import obtain_auth_token
 
-from users.api.views import UserCreateAPIView, LoggedInUserInfoView
+from users.api.views import UserCreateAPIView, LoggedInUserInfoView, get_ip_info
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -43,6 +43,7 @@ urlpatterns = [
                   path("api/auth-token/", obtain_auth_token),
                   path('api/users/create/', UserCreateAPIView.as_view(), name='create_user'),
                   path('api/users/me/', LoggedInUserInfoView.as_view(), name='me'),
+                  path('api/get_ip_info/', get_ip_info, name='get_ip_info'),
                   path("api/", include("office_catering_platform_backend.api_router")),
                   re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0),
                           name='schema-json'),
